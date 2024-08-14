@@ -3,7 +3,7 @@
   height: clamp(3rem, 4vw, 4rem);
   border-radius: 50%;
   cursor: pointer;
-  border: 0.3rem solid var(--accent-color);
+  border: 0.2rem solid var(--accent-color);
 }
 
 .section {
@@ -11,12 +11,10 @@
 
   flex-direction: column;
   background-color: var(--bg-color);
-  min-height: calc(100vh - 7rem);
+  min-height:calc(100vh - 7rem);
 
   &__cars {
     @include flex-center;
-
-    height: 50vh;
 
     img {
       mix-blend-mode: multiply;
@@ -35,19 +33,19 @@
     }
   }
 
-  &__button-red {
-    background-color: var(--color-red);
-  }
-
-  &__button-black {
-    background-color: var(--color-black);
-  }
-
-  &__button-violet {
-    background-color: var(--color-violet);
-  }
-
   &__button-green {
     background-color: var(--color-green);
+  }
+
+  &__button-white {
+    background-color: var(--color-white);
+  }
+
+  &__button-brown {
+    background-color: var(--color-brown);
+  }
+
+  &__button-blue {
+    background-color: var(--color-blue);
   }
 }
