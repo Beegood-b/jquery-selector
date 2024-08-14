@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <link rel="stylesheet" href="./styles/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__logo"><a href="/">LOGO.</a></div>
+        <nav class="header__nav hidden-mobile">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="" class="header__nav-link">Home</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__nav-link">About</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__nav-link">Prices</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__nav-link">Reviews</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="" class="header__nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          id="burgerMenu"
+          class="header__burger-button button__burger-menu burger-button visible-mobile"
+          type="button"
+          onclick="mobileOverlay.showModal()"
+        >
+          <span class="visually-hidden">Open navigation menu</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="section">
+        <div class="section__cars">
+          <div id="imgHolder" class="section__red-car">
+            <img src="./images/car-red.jpg" alt="" />
+          </div>
+        </div>
+        <div class="section__buttons">
+          <div
+            class="section__button-red button"
+            data-image-path="./images/car-red.jpg"
+          ></div>
+          <div
+            class="section__button-black button"
+            data-image-path="./images/black-car.jpg"
+          ></div>
+          <div
+            class="section__button-violet button"
+            data-image-path="./images/violet-car.jpg"
+          ></div>
+          <div
+            class="section__button-green button"
+            data-image-path="./images/green-car.jpg"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <form class="mobile-overlay__close-button-wrapper">
+        <button
+          id="crossButton"
+          class="mobile-overlay__close-button cross-button"
+          type="submit"
+        >
+          <span class="visually-hidden">Close navigation</span>
+        </button>
+      </form>
+      <div class="mobile-overlay__body">
+        <ul class="mobile-overlay__list">
+          <li class="mobile-overlay__item">
+            <a href="/" class="mobile-overlay__link">Home</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="/" class="mobile-overlay__link">About</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="/" class="mobile-overlay__link">Prices</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="/" class="mobile-overlay__link">Reviews</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="/" class="mobile-overlay__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
+
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

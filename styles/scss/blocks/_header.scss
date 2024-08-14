@@ -1,0 +1,57 @@
+.header {
+  max-height: 7rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--accent-color);
+
+  &__inner {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+  }
+
+  &__logo {
+    font-size: 4rem;
+    color: var(--color-white);
+  }
+
+  &__nav-list {
+    @include flex-center;
+    
+    column-gap: 4rem;
+    flex-wrap: wrap;
+
+    @include tablet {
+      column-gap: 3rem;
+    }
+  }
+
+  &__nav-item a {
+    font-size: 2rem;
+    color: var(--color-white);
+    position: relative;
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 130%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0.2rem;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

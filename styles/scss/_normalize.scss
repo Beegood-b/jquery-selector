@@ -1,0 +1,153 @@
+/**
+  Normalization of the block model
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+    Remove left padding from list tags
+    that have a class attribute
+    */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+    Remove margin from the body and two other tags
+    that have a class attribute
+    */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+    Remove vertical margins from specific tags
+    that have a class attribute
+    */
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+    Remove the default bullet from unordered lists
+    that have a class attribute
+    */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+    Reset vertical margins for paragraphs,
+    declare a local variable for the bottom margin
+    to avoid interaction with more complex selectors
+    */
+p {
+  --paragraphMarginBottom: 24px;
+
+  margin-block: 0;
+}
+
+/**
+    Bottom margin for paragraphs without a class attribute,
+    which are not the last among their sibling elements
+    */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+    Simplify working with images
+    */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+    Inherit font properties for form elements
+    */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+      Useful in most situations
+      (e.g., when you need to "stick" the footer to the bottom of the site)
+      */
+  height: 100%;
+}
+
+/**
+    Smooth scrolling
+    */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+      Useful in most situations
+      (e.g., when you need to "stick" the footer to the bottom of the site)
+      */
+  min-height: 100%;
+  /**
+      Unified line height
+      */
+  line-height: 1.5;
+}
+
+/**
+    Unify the color of SVG elements
+    */
+svg *[fill] {
+  fill: currentColor;
+}
+
+svg *[stroke] {
+  stroke: currentColor;
+}
+
+/**
+    Fix delay in color change when interacting with SVG elements
+    */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+    Remove all animations and transitions for people
+    who prefer not to use them
+    */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
