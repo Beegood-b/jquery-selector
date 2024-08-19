@@ -4,11 +4,12 @@
   margin: 0;
   border: none;
   background-color: var(--accent-color);
+  animation: fade 0.3s ease;
 
   &:modal {
     max-width: 100%;
     max-height: 100%;
-    padding: 0.6rem 2.3rem;
+    padding: 1rem 2.3rem;
   }
 
   &__close-button-wrapper {
@@ -26,5 +27,14 @@
     a {
       color: var(--bg-color);
     }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

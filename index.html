@@ -9,7 +9,7 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <div class="header__logo"><a href="/">LOGO.</a></div>
+        <div class="header__logo"><a href="/">Pickr</a></div>
         <nav class="header__nav hidden-mobile">
           <ul class="header__nav-list">
             <li class="header__nav-item">
@@ -44,26 +44,44 @@
       <section class="section">
         <div class="section__cars">
           <div id="imgHolder" class="section__green-car">
-            <img src="./images/green-car.jpg" alt="" />
+            <img
+              src="./images/green-car.jpg"
+              alt="green car"
+              width="612"
+              height="484"
+              loading="lazy"
+            />
           </div>
         </div>
         <div class="section__buttons">
-          <div
+          <button
             class="section__button-green button"
             data-image-path="./images/green-car.jpg"
-          ></div>
-          <div
+            type="button"
+          >
+            <span class="visually-hidden">Green-button</span>
+          </button>
+          <button
             class="section__button-white button"
             data-image-path="./images/white-car.jpg"
-          ></div>
-          <div
+            type="button"
+          >
+            <span class="visually-hidden">White-button</span>
+          </button>
+          <button
             class="section__button-brown button"
             data-image-path="./images/brown-car.jpg"
-          ></div>
-          <div
+            type="button"
+          >
+            <span class="visually-hidden">Brown-button</span>
+          </button>
+          <button
             class="section__button-blue button"
             data-image-path="./images/blue-car.jpg"
-          ></div>
+            type="button"
+          >
+            <span class="visually-hidden">Blue-button</span>
+          </button>
         </div>
       </section>
     </main>
@@ -99,7 +117,7 @@
       </div>
     </dialog>
 
-    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/jquery.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
