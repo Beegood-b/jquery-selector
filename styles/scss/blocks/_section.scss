@@ -1,6 +1,6 @@
 .button {
-  width: clamp(3rem, 4vw, 4rem);
-  height: clamp(3rem, 4vw, 4rem);
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   cursor: pointer;
   border: 0.1rem solid var(--gray-color);
